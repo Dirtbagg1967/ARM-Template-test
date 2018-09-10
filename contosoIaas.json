@@ -397,7 +397,7 @@
           "osDisk": {
             "name": "vmPrivateOSDisk",
             "vhd": {
-              "uri": "[concat(reference(resourceId('Microsoft.Storage/storageAccounts', concat(parameters('storageAccountNamePrefix'),copyIndex(),uniqueString(resourceGroup().id))), '2016-01-01').primaryEndpoints.blob, variables('vmPrivateStorageAccountContainerName'), '/', variables('vmPrivateOSDiskName'), '.vhd')]"
+              "uri": "[concat(reference(resourceId('Microsoft.Storage/storageAccounts', concat(parameters('storageAccountNamePrefix'),0,uniqueString(resourceGroup().id))), '2016-01-01').primaryEndpoints.blob, variables('vmPrivateStorageAccountContainerName'), '/', variables('vmPrivateOSDiskName'), '.vhd')]"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
